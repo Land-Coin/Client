@@ -64,7 +64,7 @@ const Services = () => {
         background: "linear-gradient(106.42deg, #1C1B2D -0.82%, #18162F 100%)",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ pt: "5%", pb: "5%" }}>
         <Box
           sx={{
             width: "100%",

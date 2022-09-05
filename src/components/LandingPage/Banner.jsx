@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import banner from "../../Assets/Group.svg";
 
@@ -14,9 +7,10 @@ const Banner = () => {
     <Box
       sx={{
         background: "linear-gradient(106.42deg, #E2E7E6 -0.82%, #ECE5E6 100%)",
+        minHeight: "100vh",
       }}
     >
-      <Container maxWidth="xl" sx={{}}>
+      <Container maxWidth="xl">
         <Grid
           container
           sx={{
@@ -38,7 +32,7 @@ const Banner = () => {
                 sx={{
                   color: "#1C1B2D !important",
                   fontWeight: 700,
-                  fontSize: "52px",
+                  fontSize: "clamp(2rem, 6vw,4rem)",
                   lineHeight: "63px",
                 }}
               >
@@ -82,7 +76,7 @@ const Banner = () => {
             }}
           >
             <Box sx={{}}>
-              <img src={banner} style={{ width: "100%" }} />
+              <img src={banner} style={{ width: "100%" }} alt="" />
             </Box>
           </Grid>
         </Grid>
