@@ -1,9 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
-import { fontSize } from "@mui/system";
-import React from "react";
 
-// Take an example of someone with ksh wanting to purchase property in the United States , the two parties would have to convert the currency to their native currencies, of which some money would be spent on transaction and exchange cost, which can amount to some substantial amount of funds lost.
-// However, that amount could be saved by transferring LandCoins directly from one account address to another.
+import React from "react";
 
 const _items = [
   {
@@ -111,7 +108,6 @@ const Services = () => {
               </Typography>
               <Typography
                 sx={{
-                  color: "#fff",
                   fontWeight: 600,
                   fontSize: "18px",
                   ml: "5%",
@@ -122,7 +118,6 @@ const Services = () => {
               </Typography>
               <Typography
                 sx={{
-                  color: "#fff",
                   fontWeight: 400,
                   fontSize: "16px",
                   ml: "5%",
@@ -133,7 +128,6 @@ const Services = () => {
               </Typography>
               <Typography
                 sx={{
-                  color: "#fff",
                   fontWeight: 400,
                   fontSize: "16px",
                   ml: "5%",
@@ -144,7 +138,6 @@ const Services = () => {
               </Typography>
               <Typography
                 sx={{
-                  color: "#fff",
                   fontWeight: 400,
                   fontSize: "16px",
                   ml: "5%",
@@ -155,7 +148,6 @@ const Services = () => {
               </Typography>
               <Typography
                 sx={{
-                  color: "#fff",
                   fontWeight: 400,
                   fontSize: "16px",
                   ml: "5%",
