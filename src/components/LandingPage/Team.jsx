@@ -21,6 +21,7 @@ const Team = () => {
             Our Team
           </Typography>
         </Box>
+        <Box></Box>
       </Container>
     </Box>
   );
