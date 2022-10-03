@@ -5,16 +5,18 @@ import NavBar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TransactionsPage from "./components/Transactions/TransactionsPage";
+import History from "./components/PropertyHistory/History";
 
 function App() {
   return (
     <BrowserRouter>
       <Box>
         <NavBar />
-        <Toolbar />
+        <Toolbar sx={{ backgroundColor: "#E4E6E6" }} />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/transactions" element={<TransactionsPage />} />
+          <Route path="/history" element={<History />} />
         </Routes>
       </Box>
     </BrowserRouter>

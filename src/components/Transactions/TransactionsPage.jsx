@@ -9,143 +9,145 @@ import FormLabel from "@mui/material/FormLabel";
 
 const TransactionsPage = () => {
   return (
-    <Container maxWidth="md">
-      <Grid container mt="4%" alignItems="center">
-        <Grid item md={6}>
-          <Typography fontWeight="bold">Sender's Wallet :</Typography>
+    <Box sx={{ backgroundColor: "#E4E6E6", minHeight: "100vh", pt: "7%" }}>
+      <Container maxWidth="md">
+        <Grid container alignItems="center">
+          <Grid item md={6}>
+            <Typography fontWeight="bold">Sender's Wallet :</Typography>
+          </Grid>
+          <Grid item md={6}>
+            <CssTextField
+              sx={{ width: { xs: "100%" } }}
+              placeholder="Enter address"
+            />
+          </Grid>
         </Grid>
-        <Grid item md={6}>
-          <CssTextField
-            sx={{ width: { xs: "100%" } }}
-            placeholder="Enter address"
-          />
+        <Grid container mt="4%" alignItems="center">
+          <Grid item md={6}>
+            <Typography fontWeight="bold">Receiver's Wallet :</Typography>
+          </Grid>
+          <Grid item md={6}>
+            <CssTextField
+              sx={{ width: { xs: "100%" } }}
+              placeholder="Enter address"
+            />
+          </Grid>
+        </Grid>{" "}
+        <Grid container mt="4%" alignItems="center">
+          <Grid item md={6}>
+            <Typography fontWeight="bold">Amount :</Typography>
+          </Grid>
+          <Grid item md={6}>
+            <CssTextField
+              sx={{ width: { xs: "100%" } }}
+              placeholder="Enter Amount"
+            />
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid container mt="4%" alignItems="center">
-        <Grid item md={6}>
-          <Typography fontWeight="bold">Receiver's Wallet :</Typography>
-        </Grid>
-        <Grid item md={6}>
-          <CssTextField
-            sx={{ width: { xs: "100%" } }}
-            placeholder="Enter address"
-          />
-        </Grid>
-      </Grid>{" "}
-      <Grid container mt="4%" alignItems="center">
-        <Grid item md={6}>
-          <Typography fontWeight="bold">Amount :</Typography>
-        </Grid>
-        <Grid item md={6}>
-          <CssTextField
-            sx={{ width: { xs: "100%" } }}
-            placeholder="Enter Amount"
-          />
-        </Grid>
-      </Grid>
-      <Grid container mt="4%" alignItems="center">
-        <Grid item xs={12}>
-          <Typography fontWeight="bold">Transaction Type :</Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-            <Stack>
-              <FormControl>
-                <RadioGroup
-                  aria-labelledby="demo-radio-buttons-group-label"
-                  defaultValue="female"
-                  name="radio-buttons-group"
-                >
-                  <FormControlLabel
-                    value="Buy"
-                    control={<Radio />}
-                    label="Buy"
-                  />
-                  <FormControlLabel
-                    value="Rent"
-                    control={<Radio />}
-                    label="Rent"
-                  />
-                  <FormControlLabel
-                    value="Transfer Ownership"
-                    control={<Radio />}
-                    label="Transfer Ownership"
-                  />
-                </RadioGroup>
-              </FormControl>
-            </Stack>
-            <Stack>
-              <FormControl>
-                <RadioGroup
-                  aria-labelledby="demo-radio-buttons-group-label"
-                  defaultValue="female"
-                  name="radio-buttons-group"
-                >
-                  <FormControlLabel
-                    value="Sell"
-                    control={<Radio />}
-                    label="Sell"
-                  />
-                  <FormControlLabel
-                    value="Subdivide"
-                    control={<Radio />}
-                    label="Subdivide"
-                  />
-                </RadioGroup>
-              </FormControl>
-            </Stack>
-          </Box>
-        </Grid>
-        <Grid item xs={12} mt="4%">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-            }}
-          >
-            <Typography fontWeight="bold">Caveat :</Typography>
-            <Button
+        <Grid container mt="4%" alignItems="center">
+          <Grid item xs={12}>
+            <Typography fontWeight="bold">Transaction Type :</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+              <Stack>
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                  >
+                    <FormControlLabel
+                      value="Buy"
+                      control={<Radio />}
+                      label="Buy"
+                    />
+                    <FormControlLabel
+                      value="Rent"
+                      control={<Radio />}
+                      label="Rent"
+                    />
+                    <FormControlLabel
+                      value="Transfer Ownership"
+                      control={<Radio />}
+                      label="Transfer Ownership"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </Stack>
+              <Stack>
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                  >
+                    <FormControlLabel
+                      value="Sell"
+                      control={<Radio />}
+                      label="Sell"
+                    />
+                    <FormControlLabel
+                      value="Subdivide"
+                      control={<Radio />}
+                      label="Subdivide"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </Stack>
+            </Box>
+          </Grid>
+          <Grid item xs={12} mt="4%">
+            <Box
               sx={{
-                backgroundColor: "#1C1B2D",
-                "&:hover": { backgroundColor: "#1C1B2D" },
-                color: "#fff",
+                display: "flex",
+                justifyContent: "space-evenly",
+                alignItems: "center",
               }}
             >
-              Add
-            </Button>
-            <Button
+              <Typography fontWeight="bold">Caveat :</Typography>
+              <Button
+                sx={{
+                  backgroundColor: "#1C1B2D",
+                  "&:hover": { backgroundColor: "#1C1B2D" },
+                  color: "#fff",
+                }}
+              >
+                Add
+              </Button>
+              <Button
+                sx={{
+                  backgroundColor: "red",
+                  "&:hover": { backgroundColor: "red" },
+                  color: "#fff",
+                }}
+              >
+                Remove
+              </Button>
+            </Box>
+          </Grid>
+          <Grid item xs={12} mt="6%">
+            <Box
               sx={{
-                backgroundColor: "red",
-                "&:hover": { backgroundColor: "red" },
-                color: "#fff",
+                display: "flex",
+                justifyContent: "space-evenly",
+                alignItems: "center",
               }}
             >
-              Remove
-            </Button>
-          </Box>
+              <Button
+                sx={{
+                  backgroundColor: "#1C1B2D",
+                  "&:hover": { backgroundColor: "#1C1B2D" },
+                  color: "#fff",
+                }}
+              >
+                Complete Transaction
+              </Button>
+            </Box>
+          </Grid>
         </Grid>
-        <Grid item xs={12} mt="6%">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-            }}
-          >
-            <Button
-              sx={{
-                backgroundColor: "#1C1B2D",
-                "&:hover": { backgroundColor: "#1C1B2D" },
-                color: "#fff",
-              }}
-            >
-              Complete Transaction
-            </Button>
-          </Box>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

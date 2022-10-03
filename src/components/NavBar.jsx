@@ -28,14 +28,14 @@ const NavBar = () => {
             maxWidth="xl"
             sx={{ display: "flex", alignItems: "center" }}
           >
-            <Box sx={{ flex: 0.4 }}>
+            <Box sx={{ flex: 0.3 }}>
               <Link to="/" style={{ textDecoration: "none" }}>
                 <Typography color="white" fontWeight="bold">
                   LANDCOIN
                 </Typography>
               </Link>
             </Box>
-            <Box sx={{ flex: { xs: 0.6 } }}>
+            <Box sx={{ flex: { xs: 0.7 } }}>
               <Box
                 sx={{
                   display: "flex",
@@ -47,7 +47,7 @@ const NavBar = () => {
                   sx={{
                     display: { xs: "none", sm: "flex" },
                     opacity: { sm: 0, md: 1 },
-                    width: { md: "60%" },
+                    width: { md: "80%" },
                     justifyContent: "space-between",
                   }}
                 >
@@ -56,9 +56,16 @@ const NavBar = () => {
                       Transact
                     </Typography>
                   </Link>
+
                   <Typography>List Property</Typography>
 
                   <Typography>Search</Typography>
+                  <Link to="/history" style={{ textDecoration: "none" }}>
+                    <Typography color="#fff" fontWeight="bold">
+                      History
+                    </Typography>
+                  </Link>
+
                   <Typography>Edit Property</Typography>
                 </Box>
 
