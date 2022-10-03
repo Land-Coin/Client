@@ -11,6 +11,7 @@ import {
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavDrawer from "./NavDrawer";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,11 @@ const NavBar = () => {
             sx={{ display: "flex", alignItems: "center" }}
           >
             <Box sx={{ flex: 0.4 }}>
-              <Typography>LANDCOIN</Typography>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Typography color="white" fontWeight="bold">
+                  LANDCOIN
+                </Typography>
+              </Link>
             </Box>
             <Box sx={{ flex: { xs: 0.6 } }}>
               <Box
@@ -46,9 +51,15 @@ const NavBar = () => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Typography>Transact</Typography>
+                  <Link to="/transactions" style={{ textDecoration: "none" }}>
+                    <Typography color="white" fontWeight="bold">
+                      Transact
+                    </Typography>
+                  </Link>
                   <Typography>List Property</Typography>
+
                   <Typography>Search</Typography>
+                  <Typography>Edit Property</Typography>
                 </Box>
 
                 <Button
