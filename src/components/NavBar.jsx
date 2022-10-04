@@ -56,9 +56,11 @@ const NavBar = () => {
                       Transact
                     </Typography>
                   </Link>
-
-                  <Typography>List Property</Typography>
-
+                  <Link to="/listproperty" style={{ textDecoration: "none" }}>
+                    <Typography color="#fff" fontWeight="bold">
+                      List Property
+                    </Typography>
+                  </Link>
                   <Typography>Search</Typography>
                   <Link to="/history" style={{ textDecoration: "none" }}>
                     <Typography color="#fff" fontWeight="bold">

@@ -6,6 +6,7 @@ import LandingPage from "./components/LandingPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TransactionsPage from "./components/Transactions/TransactionsPage";
 import History from "./components/PropertyHistory/History";
+import ListProperty from "./components/ListProperty/ListProperty";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/transactions" element={<TransactionsPage />} />
           <Route path="/history" element={<History />} />
+          <Route path="/listproperty" element={<ListProperty />} />
         </Routes>
       </Box>
     </BrowserRouter>
