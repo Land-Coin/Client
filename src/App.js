@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TransactionsPage from "./components/Transactions/TransactionsPage";
 import History from "./components/PropertyHistory/History";
 import ListProperty from "./components/ListProperty/ListProperty";
+import Search from "./components/Search/Search";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/transactions" element={<TransactionsPage />} />
           <Route path="/history" element={<History />} />
           <Route path="/listproperty" element={<ListProperty />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </Box>
     </BrowserRouter>
