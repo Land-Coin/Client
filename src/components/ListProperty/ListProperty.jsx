@@ -20,7 +20,7 @@ const ListProperty = () => {
             Add property to the system
           </Typography>
         </Box>
-        <Grid container alignItems="center">
+        <Grid container alignItems="center" mt="4%">
           <Grid
             item
             xs={12}
@@ -56,7 +56,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <Typography fontSize="18px">2. Enter Use of Property : </Typography>
           </Grid>
@@ -64,7 +64,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <FormControl>
               <RadioGroup row defaultValue="female" name="radio-buttons-group">
@@ -90,7 +90,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <Typography fontSize="18px">
               3. Enter Size in Hectares/ Acres:{" "}
@@ -100,7 +100,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <CssTextField placeholder="Enter size of land" />
           </Grid>
@@ -108,7 +108,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <Typography fontSize="18px">
               4. Enter Title Deed Number or Id:{" "}
@@ -118,7 +118,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <CssTextField placeholder="Enter Title Number or ID" />
           </Grid>
@@ -126,7 +126,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <Typography fontSize="18px">5. Enter Ownership: </Typography>
           </Grid>
@@ -134,7 +134,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <CssTextField placeholder="Enter size owner of land" />
           </Grid>
@@ -142,7 +142,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <Typography fontSize="18px">6. Enter The Price: </Typography>
           </Grid>
@@ -150,7 +150,7 @@ const ListProperty = () => {
             item
             xs={12}
             md={6}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{ display: "flex", justifyContent: "center", mt: "2%" }}
           >
             <CssTextField placeholder="Enter price of land" />
           </Grid>
@@ -163,6 +163,7 @@ const ListProperty = () => {
                 backgroundColor: "#1C1B2D",
                 "&:hover": { backgroundColor: "#1C1B2D" },
                 width: "100px",
+                mt: "2%",
               }}
             >
               Submit
