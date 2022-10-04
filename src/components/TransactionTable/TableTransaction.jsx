@@ -1,6 +1,6 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import React from "react";
-import { CssTextField } from "../CustomTextBox";
+
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import Table from "@mui/material/Table";
@@ -21,18 +21,12 @@ const rows = [
   createData("12/09/22", "buy", "0ooxo..ox9", "0ooxo..ox9", 3.9),
 ];
 
-const History = () => {
+const TransactionTable= () => {
   return (
     <Box sx={{ backgroundColor: "#E4E6E6", pt: "7%", minHeight: "100vh" }}>
       <Container maxWidth="lg">
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Typography fontSize={{ xs: "16px", sm: "32px" }}>
-            Enter Title Number or ID Below
-          </Typography>
-        </Box>
-        <Box sx={{ display: "flex", justifyContent: "center", mt: "2%" }}>
-          <CssTextField sx={{ width: "400px" }} />
-        </Box>
+        
+       
         <Box sx={{ mt: "4%" }}>
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -76,4 +70,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default TransactionTable;
