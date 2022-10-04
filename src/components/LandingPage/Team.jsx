@@ -18,7 +18,7 @@ const Team = () => {
               lineHeight: "63px",
             }}
           >
-            Our Team
+            {/* Our Team */}
           </Typography>
         </Box>
         <Box></Box>

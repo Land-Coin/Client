@@ -8,6 +8,7 @@ import TransactionsPage from "./components/Transactions/TransactionsPage";
 import History from "./components/PropertyHistory/History";
 import ListProperty from "./components/ListProperty/ListProperty";
 import Search from "./components/Search/Search";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/listproperty" element={<ListProperty />} />
           <Route path="/search" element={<Search />} />
         </Routes>
+        <Footer />
       </Box>
     </BrowserRouter>
   );

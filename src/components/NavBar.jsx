@@ -61,14 +61,18 @@ const NavBar = () => {
                       List Property
                     </Typography>
                   </Link>
-                  <Typography>Search</Typography>
+                  <Link to="/search" style={{ textDecoration: "none" }}>
+                    <Typography color="#fff" fontWeight="bold">
+                      Search
+                    </Typography>
+                  </Link>
                   <Link to="/history" style={{ textDecoration: "none" }}>
                     <Typography color="#fff" fontWeight="bold">
                       History
                     </Typography>
                   </Link>
 
-                  <Typography>Edit Property</Typography>
+                  {/* <Typography>Edit Property</Typography> */}
                 </Box>
 
                 <Button

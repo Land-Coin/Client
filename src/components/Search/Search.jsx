@@ -5,7 +5,7 @@ import { CssTextField } from "../CustomTextBox";
 const Search = () => {
   return (
     <Box>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ pb: "4%" }}>
         <Box sx={{ display: "flex", justifyContent: "center", mt: "4%" }}>
           {" "}
           <Typography fontSize={{ xs: "18px", md: "32px" }}>
