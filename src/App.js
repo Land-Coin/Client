@@ -4,9 +4,7 @@ import { Box, Toolbar } from "@mui/material";
 import NavBar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import TransactionsPage from "./components/Transactions/TransactionsPage";
-// import History from "./components/TransactionTable/History";
-// import ListProperty from "./components/ListProperty/ListProperty";
+
 import Search from "./components/Search/Search";
 import Footer from "./components/Footer/Footer";
 import Property from "./components/Property";
@@ -29,12 +27,11 @@ function App() {
           <div style={{ minHeight: "100vh" }}>
             <Routes>
               <Route path="/" element={<LandingPage />} />
-              {/* <Route path="/transactions" element={<TransactionsPage />} /> */}
-              {/* <Route path="/history" element={<History />} /> */}
+          
               <Route path="/sx" element={<Property />} />
               <Route path="/sy" element={<ListPropertyOne />} />
               <Route path="/sd" element={<EditProperty />} />
-              {/* <Route path="/listproperty" element={<ListProperty />} /> */}
+              
               <Route path="/search" element={<Search />} />
               <Route path="account/" element={<Account />}>
                 <Route path="trades" element={<Trades />}>
