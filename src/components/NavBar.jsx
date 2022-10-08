@@ -51,24 +51,24 @@ const NavBar = () => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Link to="/transactions" style={{ textDecoration: "none" }}>
+                  <Link to="/sy" style={{ textDecoration: "none" }}>
                     <Typography color="white" fontWeight="bold">
-                      Transact
+                    List Property
                     </Typography>
                   </Link>
-                  <Link to="/listproperty" style={{ textDecoration: "none" }}>
+                  <Link to="/sx" style={{ textDecoration: "none" }}>
                     <Typography color="#fff" fontWeight="bold">
-                      List Property
+                      Search Propertry
                     </Typography>
                   </Link>
-                  <Link to="/search" style={{ textDecoration: "none" }}>
+                  <Link to="/sd" style={{ textDecoration: "none" }}>
                     <Typography color="#fff" fontWeight="bold">
-                      Search
+                      Edit Property
                     </Typography>
                   </Link>
-                  <Link to="/history" style={{ textDecoration: "none" }}>
+                  <Link to="/account" style={{ textDecoration: "none" }}>
                     <Typography color="#fff" fontWeight="bold">
-                      History
+                      Accounts
                     </Typography>
                   </Link>
 

@@ -1,17 +1,17 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import { Box, Toolbar } from "@mui/material";
 import NavBar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TransactionsPage from "./components/Transactions/TransactionsPage";
+// import TransactionsPage from "./components/Transactions/TransactionsPage";
 // import History from "./components/TransactionTable/History";
 import ListProperty from "./components/ListProperty/ListProperty";
 import Search from "./components/Search/Search";
 import Footer from "./components/Footer/Footer";
 import Property from "./components/Property";
 
-import { Center, MantineProvider, Title } from "@mantine/core";
+import { Center, Title } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import ListPropertyOne from "./components/ListProperty/ListPropertyOne";
 import EditProperty from "./components/ListProperty/EditProperty";
@@ -29,7 +29,7 @@ function App() {
           <div style={{ minHeight: "100vh" }}>
             <Routes>
               <Route path="/" element={<LandingPage />} />
-              <Route path="/transactions" element={<TransactionsPage />} />
+              {/* <Route path="/transactions" element={<TransactionsPage />} /> */}
               {/* <Route path="/history" element={<History />} /> */}
               <Route path="/sx" element={<Property />} />
               <Route path="/sy" element={<ListPropertyOne />} />
