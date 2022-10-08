@@ -34,15 +34,15 @@ const TransactionTable= () => {
                 <TableRow>
                   <StyledTableCell>Time / Day</StyledTableCell>
                   <StyledTableCell align="right">
-                    Transaction Type
+                  Receiver's Address
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    Sender's Address
+                    Property Name
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    Receiver's Address
+                  Amount
                   </StyledTableCell>
-                  <StyledTableCell align="right">Amount</StyledTableCell>
+                  <StyledTableCell align="right">Status</StyledTableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
