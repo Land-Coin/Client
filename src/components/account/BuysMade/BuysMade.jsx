@@ -2,7 +2,7 @@ import { Grid, NavLink, Paper, Stack, Text } from "@mantine/core";
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
-const Trades = () => {
+const BuysMade = () => {
   return (
     <div>
       <Grid>
@@ -27,4 +27,4 @@ const Trades = () => {
   );
 };
 
-export default Trades;
+export default BuysMade;

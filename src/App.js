@@ -14,8 +14,8 @@ import { ModalsProvider } from "@mantine/modals";
 import ListPropertyOne from "./components/ListProperty/ListPropertyOne";
 import EditProperty from "./components/ListProperty/EditProperty";
 import Account from "./components/account/Account";
-import Trades from "./components/account/trades/Trades";
-import SingleTrade from "./components/account/trades/SingleTrade";
+import BuysMade from "./components/account/BuysMade/BuysMade";
+import SingleTrade from "./components/account/BuysMade/SingleTrade";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
               
               <Route path="/search" element={<Search />} />
               <Route path="account/" element={<Account />}>
-                <Route path="trades" element={<Trades />}>
+                <Route path="BuysMade" element={<BuysMade />}>
                   <Route path="" element={<Center style={{height: "100%"}} ><Title order={3}>Select Trade To Continue</Title></Center>} />
                   <Route path=":id" element={<SingleTrade />} />
                   <Route path="*" element={<Center style={{height: "100%"}} ><Title order={3}>Select Trade To Continue</Title></Center>} />
