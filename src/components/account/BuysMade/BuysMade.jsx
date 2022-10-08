@@ -1,4 +1,4 @@
-import { Grid, NavLink, Paper, Stack, Text } from "@mantine/core";
+import { Grid, NavLink, Paper, Stack,  } from "@mantine/core";
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
