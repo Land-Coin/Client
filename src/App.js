@@ -27,17 +27,31 @@ function App() {
           <div style={{ minHeight: "100vh" }}>
             <Routes>
               <Route path="/" element={<LandingPage />} />
-          
-              <Route path="/sx" element={<Property />} />
-              <Route path="/sy" element={<ListPropertyOne />} />
-              <Route path="/sd" element={<EditProperty />} />
-              
+
+              <Route path="/search" element={<Property />} />
+              <Route path="/list" element={<ListPropertyOne />} />
+              <Route path="/edit" element={<EditProperty />} />
+
               <Route path="/search" element={<Search />} />
               <Route path="account/" element={<Account />}>
                 <Route path="BuysMade" element={<BuysMade />}>
-                  <Route path="" element={<Center style={{height: "100%"}} ><Title order={3}>Select Trade To Continue</Title></Center>} />
+                  <Route
+                    path=""
+                    element={
+                      <Center style={{ height: "100%" }}>
+                        <Title order={3}>Select Trade To Continue</Title>
+                      </Center>
+                    }
+                  />
                   <Route path=":id" element={<SingleTrade />} />
-                  <Route path="*" element={<Center style={{height: "100%"}} ><Title order={3}>Select Trade To Continue</Title></Center>} />
+                  <Route
+                    path="*"
+                    element={
+                      <Center style={{ height: "100%" }}>
+                        <Title order={3}>Select Trade To Continue</Title>
+                      </Center>
+                    }
+                  />
                 </Route>
                 <Route path="rent">
                   <Route path=":id" element={<h1>single trade</h1>} />
