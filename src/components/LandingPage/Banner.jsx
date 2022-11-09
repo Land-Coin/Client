@@ -36,7 +36,7 @@ const Banner = () => {
                   lineHeight: "63px",
                 }}
               >
-                Transparency and accountability of transactions...
+                Ease and accountability of transactions...
               </Typography>
               <Box sx={{ width: "70%" }}>
                 <Typography
@@ -48,8 +48,7 @@ const Banner = () => {
                     mt: "5%",
                   }}
                 >
-                  This involves searching assets ,penalize the corrupt and
-                  reward those practicing integrity.
+                  This involves preventing double allocation and protecting stakeholders in the Real Estate industry.
                 </Typography>
               </Box>
               <Button
