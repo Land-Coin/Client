@@ -1,7 +1,7 @@
 import {
   AppBar,
   Box,
-  Button,
+  
   Container,
   CssBaseline,
   IconButton,
@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import NavDrawer from "./NavDrawer";
 import { Link } from "react-router-dom";
 
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -85,7 +86,8 @@ const NavBar = () => {
                 >
                   Connect Wallet
                 </Button> */}
-                
+                <ConnectButton/>
+
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
                   <IconButton onClick={handleOpen}>
                     <MenuIcon sx={{ color: "#fff" }} />
