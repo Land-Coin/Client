@@ -48,7 +48,7 @@ const Banner = () => {
                     mt: "5%",
                   }}
                 >
-                  This involves preventing double allocation and protecting stakeholders in the Real Estate industry.
+                  Thee landcoin is a dapp that prevents double allocation of real estate assets and protects stakeholders in the industry.
                 </Typography>
               </Box>
               <Button
