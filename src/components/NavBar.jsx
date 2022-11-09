@@ -51,17 +51,17 @@ const NavBar = () => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Link to="/sy" style={{ textDecoration: "none" }}>
+                  <Link to="/list" style={{ textDecoration: "none" }}>
                     <Typography color="white" fontWeight="bold">
-                    List Property
+                      List Property
                     </Typography>
                   </Link>
-                  <Link to="/sx" style={{ textDecoration: "none" }}>
+                  <Link to="/search" style={{ textDecoration: "none" }}>
                     <Typography color="#fff" fontWeight="bold">
                       Search Propertry
                     </Typography>
                   </Link>
-                  <Link to="/sd" style={{ textDecoration: "none" }}>
+                  <Link to="/edit" style={{ textDecoration: "none" }}>
                     <Typography color="#fff" fontWeight="bold">
                       Edit Property
                     </Typography>

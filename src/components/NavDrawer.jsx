@@ -1,6 +1,7 @@
 import { Box, Drawer, IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import { Link } from "react-router-dom";
 
 const NavDrawer = ({ open, setOpen }) => {
   return (
@@ -31,9 +32,18 @@ const NavDrawer = ({ open, setOpen }) => {
         }}
       >
         <Stack spacing={4}>
-          <Typography>Transact</Typography>
-          <Typography>List Property</Typography>
-          <Typography>Search</Typography>
+          <Link to="/list" style={{ textDecoration: "none", color: "#fff" }}>
+            <Typography>List Property</Typography>
+          </Link>
+          <Link to="/search" style={{ textDecoration: "none", color: "#fff" }}>
+            <Typography>Search</Typography>
+          </Link>
+          <Link to="/edit" style={{ textDecoration: "none", color: "#fff" }}>
+            <Typography>Edit Property</Typography>
+          </Link>
+          <Link to="/account" style={{ textDecoration: "none", color: "#fff" }}>
+            <Typography>Accounts</Typography>
+          </Link>
         </Stack>
       </Box>
     </Drawer>
