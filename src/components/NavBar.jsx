@@ -75,7 +75,7 @@ const NavBar = () => {
                   {/* <Typography>Edit Property</Typography> */}
                 </Box>
 
-                <Button
+                {/* <Button
                   sx={{
                     bgcolor: "#fff",
                     borderRadius: "50px",
@@ -84,7 +84,8 @@ const NavBar = () => {
                   }}
                 >
                   Connect Wallet
-                </Button>
+                </Button> */}
+                
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
                   <IconButton onClick={handleOpen}>
                     <MenuIcon sx={{ color: "#fff" }} />
