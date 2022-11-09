@@ -16,11 +16,37 @@ import EditProperty from "./components/ListProperty/EditProperty";
 import Account from "./components/account/Account";
 import BuysMade from "./components/account/BuysMade/BuysMade";
 import SingleTrade from "./components/account/BuysMade/SingleTrade";
+//rewinbow
+import "@rainbow-me/rainbowkit/styles.css";
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
+
+//configs
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum, chain.goerli],
+  [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()]
+);
+//connectors
+const { connectors } = getDefaultWallets({
+  appName: " Thee Landcoin",
+  chains,
+});
+
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider,
+});
 
 function App() {
   return (
     <ModalsProvider>
       <BrowserRouter>
+      <WagmiConfig  client={wagmiClient}>
+        <RainbowKitProvider chains={chains} >
         <Box>
           <NavBar />
           <Toolbar sx={{ backgroundColor: "#E4E6E6" }} />
@@ -61,6 +87,8 @@ function App() {
           </div>
           <Footer />
         </Box>
+        </RainbowKitProvider>
+        </WagmiConfig>
       </BrowserRouter>
     </ModalsProvider>
   );
