@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavDrawer from "./NavDrawer";
 import { Link } from "react-router-dom";
+import NearConnectButton from "./account/NearConnectButton"
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 const NavBar = () => {
@@ -86,8 +87,10 @@ const NavBar = () => {
                 >
                   Connect Wallet
                 </Button> */}
-                <ConnectButton/>
-
+                {/* <ConnectButton/> */}
+                
+                <NearConnectButton />
+    
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
                   <IconButton onClick={handleOpen}>
                     <MenuIcon sx={{ color: "#fff" }} />

@@ -58,7 +58,7 @@ function App() {
               <Route path="/list" element={<ListPropertyOne />} />
               <Route path="/edit" element={<EditProperty />} />
 
-              <Route path="/search" element={<Search />} />
+              {/* <Route path="/search" element={<Search />} /> */}
               <Route path="account/" element={<Account />}>
                 <Route path="BuysMade" element={<BuysMade />}>
                   <Route
