@@ -1,8 +1,22 @@
+import { TextInput } from "@mantine/core";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import React,  {useState} from "react";
+import { CONTRACT } from "../../configs/appconfig";
 import { CssTextField } from "../CustomTextBox";
 
 const Search = () => {
+  const [q, setQ] = useState("")
+  const getProperty = () => {
+    const wallet = window.walletConnection
+    if(wallet){
+      wallet.account().viewFunction(CONTRACT, "search_property", {query: q}).then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.error("Error: ", err)
+      })
+    }
+  }
+
   return (
     <Box>
       <Container maxWidth="xl" sx={{ pb: "4%" }}>
@@ -13,7 +27,8 @@ const Search = () => {
           </Typography>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "center", mt: "2%" }}>
-          <CssTextField placeholder="Enter Title Deed Number" />
+          {/* <CssTextField placeholder="Enter Title Deed Number" /> */}
+          <TextInput placeholder="Enter Title Number" value={q} onChange={e => setQ(e.target.value)} />
         </Box>
         <Grid container>
           <Grid

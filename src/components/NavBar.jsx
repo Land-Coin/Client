@@ -1,7 +1,7 @@
 import {
   AppBar,
   Box,
-  Button,
+  
   Container,
   CssBaseline,
   IconButton,
@@ -12,7 +12,9 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavDrawer from "./NavDrawer";
 import { Link } from "react-router-dom";
+import NearConnectButton from "./account/NearConnectButton"
 
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -75,7 +77,7 @@ const NavBar = () => {
                   {/* <Typography>Edit Property</Typography> */}
                 </Box>
 
-                <Button
+                {/* <Button
                   sx={{
                     bgcolor: "#fff",
                     borderRadius: "50px",
@@ -84,7 +86,11 @@ const NavBar = () => {
                   }}
                 >
                   Connect Wallet
-                </Button>
+                </Button> */}
+                {/* <ConnectButton/> */}
+                
+                <NearConnectButton />
+    
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
                   <IconButton onClick={handleOpen}>
                     <MenuIcon sx={{ color: "#fff" }} />

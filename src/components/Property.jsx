@@ -16,6 +16,7 @@ import { openConfirmModal } from "@mantine/modals";
 import { Stack } from "@mui/system";
 import React from "react";
 import { useState } from "react";
+import { CONTRACT } from "../configs/appconfig";
 
 const CustomRow = ({ obj }) => {
   return (
@@ -28,21 +29,66 @@ const CustomRow = ({ obj }) => {
   );
 };
 
-const CustomDispute = ({}) => {
+const CustomDispute = ({ dispute }) => {
   return (
     <Paper radius="md" shadow="lg" my="sm" p="sm">
-      <Title order={5}>dalmasonto.testnet</Title>
-      <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eius
-        sapiente eos. Itaque, omnis esse! Vitae architecto deleniti earum
-        possimus ratione. Expedita eum vero at illo ea nemo, quam amet.
-      </Text>
+      <Title order={5}>{dispute.raiser}</Title>
+      <Text>{dispute.message}</Text>
     </Paper>
   );
 };
 
 const Property = () => {
   const [addDOpen, setAddDOpen] = useState(false);
+
+  const [data, setData] = useState(null);
+  const [disputes, setDisputes] = useState(null);
+  const [q, setQ] = useState("");
+  const [message, setMsg] = useState("");
+
+  const getProperty = () => {
+    const wallet = window.walletConnection;
+    const contract = window.contract;
+    if (wallet && contract) {
+      // wallet
+      //   .account()
+      //   .viewFunction(CONTRACT, "search_property", { query: q })
+      //   .then((res) => {
+      //     console.log(res);
+      //   })
+      //   .catch((err) => {
+      //     console.error("Error: ", err);
+      //   });
+      contract
+        .search_property({ query: q })
+        .then((res) => {
+          console.log(res);
+          setData(res);
+        })
+        .catch((err) => {
+          console.error("Error: ", err);
+        });
+    }
+  };
+
+  const addDispute = () => {
+    const wallet = window.walletConnection;
+    const contract = window.contract;
+    if (wallet && contract) {
+      contract
+        .add_dispute({
+          prop_id: data?.id,
+          dispute: { raiser: wallet.getAccountId(), message },
+        })
+        .then((res) => {
+          console.log(res);
+          getProperty()
+        })
+        .catch((err) => {
+          console.error("Error: ", err);
+        });
+    }
+  };
 
   const openModal = () =>
     openConfirmModal({
@@ -78,8 +124,19 @@ const Property = () => {
               <Title order={1} align="center" mb="lg" color="white">
                 Search Property
               </Title>
-              <TextInput placeholder="Search ID or Title No" />
-              <Button color="indigo" radius="xl" size="sm" px="xl" mt="md">
+              <TextInput
+                placeholder="Search ID or Title No"
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+              />
+              <Button
+                color="indigo"
+                radius="xl"
+                size="sm"
+                px="xl"
+                mt="md"
+                onClick={getProperty}
+              >
                 Search
               </Button>
             </Stack>
@@ -87,20 +144,32 @@ const Property = () => {
         </Paper>
         {/* <Center> */}
         <Paper my="xl" p="sm" shadow="xl" radius="lg">
-          <CustomRow obj={{ title: "Title Number", value: "Som enumb" }} />
-          <CustomRow obj={{ title: "Category", value: "Land" }} />
-          <CustomRow obj={{ title: "Use", value: "Rent" }} />
-          <CustomRow obj={{ title: "Size", value: "Som enumb" }} />
-          <CustomRow obj={{ title: "Price", value: "Som enumb" }} />
-          <CustomRow obj={{ title: "Location", value: "Som enumb" }} />
-          <CustomRow obj={{ title: "Disputes", value: "10" }} />
-          <CustomRow obj={{ title: "Has Caveat", value: "Yes" }} />
-          <Box py="md">
-            <Title order={2}> Disputes </Title>
-            <CustomDispute />
-            <CustomDispute />
-            <CustomDispute />
-          </Box>
+          <CustomRow obj={{ title: "Title Number", value: data?.title_no }} />
+          <CustomRow obj={{ title: "Category", value: data?.category }} />
+          <CustomRow obj={{ title: "Use", value: data?.purpose?.name }} />
+          <CustomRow obj={{ title: "Size", value: data?.size }} />
+          <CustomRow obj={{ title: "Price", value: data?.price }} />
+          <CustomRow
+            obj={{
+              title: "Location",
+              value: data && `${data?.location?.lon} ${data?.location?.lat}`,
+            }}
+          />
+          <CustomRow obj={{ title: "Disputes", value: data?.disputes?.length }} />
+          <CustomRow
+            obj={{
+              title: "Has Caveat",
+              value: data && (data?.has_caveat ? "Yes" : "No"),
+            }}
+          />
+          {data?.disputes && (
+            <Box py="md">
+              <Title order={2}> Disputes </Title>
+              {data?.disputes?.map((d, i) => (
+                <CustomDispute key={`eache_dispute_${i}`} dispute={d} />
+              ))}
+            </Box>
+          )}
           <Group position="center" my="lg">
             <Button color="indigo" radius="xl" size="md" px="xl">
               Add Caveat
@@ -134,9 +203,20 @@ const Property = () => {
           transition="rotate-left"
           onClose={(e) => setAddDOpen(false)}
         >
-          <Textarea radius="md" minRows={6} />
+          <Textarea
+            radius="md"
+            minRows={6}
+            value={message}
+            onChange={(e) => setMsg(e.target.value)}
+          />
           <Group position="center" mt="lg">
-            <Button color="blue" radius="xl" size="sm" px="xl">
+            <Button
+              color="blue"
+              radius="xl"
+              size="sm"
+              px="xl"
+              onClick={addDispute}
+            >
               Add
             </Button>
           </Group>
